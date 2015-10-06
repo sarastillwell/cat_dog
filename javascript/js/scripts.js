@@ -1,10 +1,15 @@
 $(document).ready(function() {
   $("button#meow").click(function() {
-    $("ul").prepend("<li>Bark!</li>");
+    $("ul#red").prepend("<li>Bark!</li>");
+
+    $("ul#red").children("li").first().click(function() {
+      $(this).remove();
+  });
   });
 
   $("button#bark").click(function() {
-    $("ul").prepend("<li>Meow!</li>");
+    $("ul#blue").prepend("<li>Meow!</li>");
+
   });
 
 });
